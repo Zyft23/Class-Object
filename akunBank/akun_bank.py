@@ -10,16 +10,17 @@ class AkunBank:
     print(f"Saldo {self.pemilik}: Rp{self.saldo}")
     
   def tarik_tunai(self, jumlah):
-    if jumlah <= self.saldo:  
+    if jumlah <= self.saldo:
       if jumlah <= 0:
         print("jumlah tarik tunai harus lebih besar dari 0")
         return
-      if jumlah > 1000000:
+      elif jumlah > 1000000:
         print("Jumlah tarik tunai melebihi batas maksimal Rp1.000.000")
         return
-      self.saldo -= jumlah
-      self.riwayat.append(f"{self.pemilik} menarik Rp{jumlah}")
-      print(f"{self.pemilik} menarik Rp{jumlah}")
+      else:
+        self.saldo -= jumlah
+        self.riwayat.append(f"{self.pemilik} menarik Rp{jumlah}")
+        print(f"{self.pemilik} menarik Rp{jumlah}")
     else:
       print("Saldo tidak cukup!")
       

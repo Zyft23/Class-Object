@@ -1,4 +1,4 @@
-member = True
+member = False
 class Produk:
   def __init__(self, nama, harga, stok):
     self.nama = nama
